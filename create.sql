@@ -1,9 +1,9 @@
 CREATE TABLE brand(
-      brand_name varchar(20) not null UNIQUE PRIMARY KEY
+      brand_name VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY
 );
  
 CREATE TABLE ownerships(
-      ownership_type varchar(20) not null UNIQUE PRIMARY KEY
+      ownership_type VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY
 );
 
 

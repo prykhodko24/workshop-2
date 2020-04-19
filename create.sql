@@ -13,10 +13,10 @@ state_name VARCHAR(20) NOT NULL ,
 CONSTRAINT PK_States PRIMARY KEY (country,state_name)
 );
 CREATE TABLE Stores(
-    brand_name VARCHAR (10) NOT NULL REFERENCES brand(brand_name),
-    ownership_type VARCHAR (10) NOT NULL REFERENCES ownerships(ownership_type),
-    state_name VARCHAR (10) ,
-    country VARCHAR (10),
+    brand_name VARCHAR (20) NOT NULL REFERENCES brand(brand_name),
+    ownership_type VARCHAR (20) NOT NULL REFERENCES ownerships(ownership_type),
+    state_name VARCHAR (20) ,
+    country VARCHAR (20),
     store_number VARCHAR(20) NOT NULL PRIMARY KEY
     ,store_name VARCHAR(20) NOT NULL 
     ,address VARCHAR(20)

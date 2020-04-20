@@ -42,5 +42,3 @@ VALUES ('Teavana','19945-198044','Abasto 2','Company Owned','Avenida Corrien','B
 
 INSERT INTO Stores(brand_name,store_number,store_name,ownership_type,address,city,state_name,country,postcode,longitude,latitude)
 VALUES ('Starbucks','15458-161684','Triunvirato','Company Owned','Av Triunvirato','Buenos Aires','K','AR','C1431FBT',-58.48,-34.58);
-
-

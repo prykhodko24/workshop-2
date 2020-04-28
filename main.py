@@ -23,7 +23,8 @@ def fileId_from_url(url):
     id = cleared[4]
     fileId = nickname + ':' + id
     return fileId
-
+def get_id(url):
+    return re.findall("/(\d+)/$", url)[0]
 
 #---q1
 query1 = """select uu.country, uu.cnt
@@ -105,20 +106,20 @@ my_board = dashboard.Dashboard()
 box1 = {
     'type': 'box',
     'boxType': 'plot',
-    'fileId': fileId_from_url(gr_q1),
+    'fileId': 't.prykhodko' + get_id(gr_q1),
     'title': '1 запит-кількість філіалів  в 3 країнах з найбільшої кількістю закладів '
 }
 box2 = {
     'type': 'box',
     'boxType': 'plot',
-    'fileId': fileId_from_url(gr_q2),
+    'fileId': 't.prykhodko:' + get_id(gr_q2),
     'title': '2 запит-форми власності та відсоток закладів з такою формою власності',
 
 }
 box3 = {
     'type': 'box',
     'boxType': 'plot',
-    'fileId': fileId_from_url(gr_q3),
+    'fileId': 't.prykhodko:' + get_id(gr_q3),
     'title': '3 запит-кількість філіалів у кожного бренду'
 }
 

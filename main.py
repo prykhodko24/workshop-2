@@ -5,7 +5,7 @@ from plotly.subplots import make_subplots
 import chart_studio
 import chart_studio.plotly as py
 import chart_studio.dashboard_objs as dashboard
-
+import re
 
 
 
@@ -16,13 +16,7 @@ chart_studio.tools.set_credentials_file(username='t.prykhodko',api_key='5QCDRot2
 connection = cx_Oracle.connect(username,password, databaseName)
 cursor = connection.cursor()
 
-def fileId_from_url(url):
-    url_raw = url.split('/')
-    cleared = [s.strip('~') for s in url_raw]  # remove the ~
-    nickname = cleared[3]
-    id = cleared[4]
-    fileId = nickname + ':' + id
-    return fileId
+
 def get_id(url):
     return re.findall("/(\d+)/$", url)[0]
 
@@ -103,29 +97,29 @@ gr_q3 = py.plot([scatter], auto_open=False, filename='task 3')
 #---end graph--
 
 my_board = dashboard.Dashboard()
-box1 = {
+box_n_one = {
     'type': 'box',
     'boxType': 'plot',
     'fileId': 't.prykhodko' + get_id(gr_q1),
     'title': '1 запит-кількість філіалів  в 3 країнах з найбільшої кількістю закладів '
 }
-box2 = {
+box_n_two = {
     'type': 'box',
     'boxType': 'plot',
     'fileId': 't.prykhodko:' + get_id(gr_q2),
     'title': '2 запит-форми власності та відсоток закладів з такою формою власності',
 
 }
-box3 = {
+box_n_three = {
     'type': 'box',
     'boxType': 'plot',
     'fileId': 't.prykhodko:' + get_id(gr_q3),
     'title': '3 запит-кількість філіалів у кожного бренду'
 }
 
-my_board.insert(box1)
-my_board.insert(box2, 'below', 1)
-my_board.insert(box3, 'right', 2)
+my_board.insert(box_n_one)
+my_board.insert(box_n_two, 'below', 1)
+my_board.insert(box_n_three, 'right', 2)
 
 py.dashboard_ops.upload(my_board, 'Tanya')
 

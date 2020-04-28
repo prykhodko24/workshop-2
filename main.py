@@ -18,7 +18,7 @@ cursor = connection.cursor()
 
 
 def get_id(url):
-    return re.findall("/(\d+)/$", url)[0]
+    return re.findall("[0-9]+",url)[0]
 
 #---q1
 query1 = """select uu.country, uu.cnt
@@ -100,7 +100,7 @@ my_board = dashboard.Dashboard()
 box_n_one = {
     'type': 'box',
     'boxType': 'plot',
-    'fileId': 't.prykhodko' + get_id(gr_q1),
+    'fileId': 't.prykhodko:' + get_id(gr_q1),
     'title': '1 запит-кількість філіалів  в 3 країнах з найбільшої кількістю закладів '
 }
 box_n_two = {

@@ -1,9 +1,11 @@
+--Виправлення:було прибрано слово UNIQUE в 4 та 8 рядках
+
 CREATE TABLE brand(
-      brand_name VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY
+      brand_name VARCHAR(20) NOT NULL PRIMARY KEY
 );
  
 CREATE TABLE ownerships(
-      ownership_type VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY
+      ownership_type VARCHAR(20) NOT NULL PRIMARY KEY
 );
 
 

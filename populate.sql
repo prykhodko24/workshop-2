@@ -12,12 +12,12 @@ INSERT INTO ownerships(ownership_type) VALUES ('Franchise');
 --TABLE States1
 
 INSERT INTO States1(state_name,country ) VALUES ('AJ','AE');
-INSERT INTO States1(country, state_name) VALUES ('AZ','AE');
-INSERT INTO States1(country, state_name) VALUES ('AL','AE');
-INSERT INTO States1(country, state_name) VALUES ('DU','AE');
-INSERT INTO States1(country, state_name) VALUES ('B','AR');
-INSERT INTO States1(country, state_name) VALUES ('C','AR');
-INSERT INTO States1(country, state_name) VALUES ('K','AR');
+INSERT INTO States1(state_name,country) VALUES ('AZ','AE');
+INSERT INTO States1(state_name,country) VALUES ('AL','AE');
+INSERT INTO States1(state_name,country) VALUES ('DU','AE');
+INSERT INTO States1(state_name,country) VALUES ('B','AR');
+INSERT INTO States1(state_name,country) VALUES ('C','AR');
+INSERT INTO States1(state_name,country) VALUES ('K','AR');
 
 
 
